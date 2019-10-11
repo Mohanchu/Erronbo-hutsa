@@ -5,7 +5,7 @@ int main(int argc, char argv[])
 	int n, i, j, x;
 	char str[128];
 
-	printf("Idatzi zenbaki bat: ");
+	printf("Idatzi zenbaki bat edo bi huehue: ");
 	fgets(str, 128, stdin);
 	sscanf(str, "%d", &n);
 	x = n;
