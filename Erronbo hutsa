@@ -1,0 +1,50 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(int argc, char argv[])
+{
+	int n, i, j, x;
+	char str[128];
+
+	printf("Idatzi zenbaki bat: ");
+	fgets(str, 128, stdin);
+	sscanf(str, "%d", &n);
+	x = n;
+	for (i = 1; i <= n; i++)
+	{
+
+		for (j = 1; j <= x - 1; j++)
+		{
+			printf(" ");
+		}
+		x = x - 1;
+		printf("*");
+		for (j = 1; j <= i * 2 - 3; j++)
+		{
+			printf(" ");
+		}
+		if (i != 1)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	for (i = n; i >= 1; i--)
+	{
+		for (j = 1; j <= x + 1; j++)
+		{
+			printf(" ");
+		}
+		printf("*");
+		x = x + 1;
+		for (j = 1; j <= i * 2 - 3; j++)
+		{
+			printf(" ");
+		}
+		if (i != 1)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
